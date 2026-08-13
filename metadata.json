@@ -1,0 +1,6 @@
+{
+  "name": "3T GDS - Global Digital Asset Distribution",
+  "description": "Travel Trust Ticket integrated services connecting international channel distribution systems for e-tickets, attractions, and global digital assets.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
