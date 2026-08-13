@@ -5,6 +5,7 @@ import { HeroSection } from './components/HeroSection';
 import { ProvideSection } from './components/ProvideSection';
 import { ServicesSection } from './components/ServicesSection';
 import { ChannelsSection } from './components/ChannelsSection';
+import { ManagementSection } from './components/ManagementSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 
@@ -24,7 +25,7 @@ export function App() {
   const [selectedChannel, setSelectedChannel] = useState<ChannelItem | null>(null);
 
   return (
-    <div className="min-h-screen bg-[#11131c] text-[#e1e1ef] selection:bg-[#43dedd] selection:text-slate-950 font-sans antialiased">
+    <div className="min-h-screen bg-white text-slate-800 selection:bg-blue-100 selection:text-blue-900 font-sans antialiased">
       {/* Navigation Bar */}
       <Navbar
         currentLang={currentLang}
@@ -32,7 +33,7 @@ export function App() {
         onOpenModal={(modal) => setActiveModal(modal)}
       />
 
-      {/* Main Page Sections matching exact requested design */}
+      {/* Main Page Sections */}
       <main>
         {/* Hero Section */}
         <HeroSection
@@ -58,6 +59,9 @@ export function App() {
           onSelectChannel={(channel) => setSelectedChannel(channel)}
           onOpenSupplierModal={() => setActiveModal('supplier')}
         />
+
+        {/* Executive Management Team Section */}
+        <ManagementSection currentLang={currentLang} />
 
         {/* Contact Us Section */}
         <ContactSection

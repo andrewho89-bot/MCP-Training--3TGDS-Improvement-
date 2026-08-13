@@ -13,19 +13,19 @@ export const Footer: React.FC<FooterProps> = ({ currentLang, onOpenModal }) => {
   const t = translations[currentLang];
 
   return (
-    <footer className="bg-[#0b0c13] text-gray-400 border-t border-[#282933] text-xs pt-16 pb-12">
+    <footer className="bg-[#0b192e] text-slate-300 border-t border-slate-800 text-xs pt-16 pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         {/* Top Grid: Brand, Nav, Offices */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
           {/* Brand Info (Col 4) */}
           <div className="lg:col-span-4 space-y-4">
-            <Logo size="lg" />
-            <p className="text-gray-400 leading-relaxed font-light">
+            <Logo size="lg" darkText={false} />
+            <p className="text-slate-300 leading-relaxed font-normal">
               {t.brand_subtitle}
             </p>
-            <div className="pt-2 text-gray-500 font-mono">
+            <div className="pt-2 text-slate-400 font-mono">
               <p>{t.footer_rights}</p>
-              <p className="text-gray-400 font-medium mt-1">{t.footer_taiwan_company}</p>
+              <p className="text-slate-200 font-medium mt-1">{t.footer_taiwan_company}</p>
             </div>
           </div>
 
@@ -34,27 +34,27 @@ export const Footer: React.FC<FooterProps> = ({ currentLang, onOpenModal }) => {
             <h4 className="text-white font-bold uppercase tracking-wider text-xs">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <button onClick={() => onOpenModal('about')} className="hover:text-[#43dedd] transition-colors cursor-pointer">
+                <button onClick={() => onOpenModal('about')} className="hover:text-[#30c3b2] transition-colors cursor-pointer">
                   {t.nav_about}
                 </button>
               </li>
               <li>
-                <button onClick={() => onOpenModal('news')} className="hover:text-[#43dedd] transition-colors cursor-pointer">
+                <button onClick={() => onOpenModal('news')} className="hover:text-[#30c3b2] transition-colors cursor-pointer">
                   {t.nav_news}
                 </button>
               </li>
               <li>
-                <button onClick={() => onOpenModal('supplier')} className="hover:text-[#43dedd] transition-colors cursor-pointer">
+                <button onClick={() => onOpenModal('supplier')} className="hover:text-[#30c3b2] transition-colors cursor-pointer">
                   {t.nav_supplier}
                 </button>
               </li>
               <li>
-                <button onClick={() => onOpenModal('products')} className="hover:text-[#43dedd] transition-colors cursor-pointer">
+                <button onClick={() => onOpenModal('products')} className="hover:text-[#30c3b2] transition-colors cursor-pointer">
                   {t.nav_services}
                 </button>
               </li>
               <li>
-                <button onClick={() => onOpenModal('team')} className="hover:text-[#43dedd] transition-colors cursor-pointer">
+                <button onClick={() => onOpenModal('team')} className="hover:text-[#30c3b2] transition-colors cursor-pointer">
                   {t.nav_team}
                 </button>
               </li>
@@ -67,26 +67,26 @@ export const Footer: React.FC<FooterProps> = ({ currentLang, onOpenModal }) => {
             
             <div className="space-y-3">
               <div className="flex items-start space-x-2">
-                <MapPin className="w-4 h-4 text-[#43dedd] shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-[#30c3b2] shrink-0 mt-0.5" />
                 <div>
-                  <span className="text-gray-200 font-semibold block">Taiwan Office</span>
-                  <span className="text-gray-400">{t.footer_taiwan_addr}</span>
+                  <span className="text-white font-semibold block">Taiwan Office</span>
+                  <span className="text-slate-300">{t.footer_taiwan_addr}</span>
                 </div>
               </div>
 
               <div className="flex items-start space-x-2">
-                <MapPin className="w-4 h-4 text-[#b0c6ff] shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
                 <div>
-                  <span className="text-gray-200 font-semibold block">{t.footer_singapore_office}</span>
-                  <span className="text-gray-400">{t.footer_singapore_addr}</span>
+                  <span className="text-white font-semibold block">{t.footer_singapore_office}</span>
+                  <span className="text-slate-300">{t.footer_singapore_addr}</span>
                 </div>
               </div>
 
               <div className="flex items-start space-x-2">
                 <MapPin className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                 <div>
-                  <span className="text-gray-200 font-semibold block">{t.footer_korea_office}</span>
-                  <span className="text-gray-400">{t.footer_korea_addr}</span>
+                  <span className="text-white font-semibold block">{t.footer_korea_office}</span>
+                  <span className="text-slate-300">{t.footer_korea_addr}</span>
                 </div>
               </div>
             </div>
@@ -94,7 +94,7 @@ export const Footer: React.FC<FooterProps> = ({ currentLang, onOpenModal }) => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-[#282933]/60 flex flex-col sm:flex-row items-center justify-between text-[11px] text-gray-500 gap-4">
+        <div className="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-400 gap-4">
           <div className="flex items-center space-x-4">
             <span>Security Certified ISO/IEC 27001</span>
             <span>&bull;</span>
